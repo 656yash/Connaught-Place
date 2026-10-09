@@ -9,7 +9,7 @@ export default function ComparePage() {
   };
 
   return (
-    <main className="min-h-screen bg-sindoor w-full flex flex-col p-4 md:p-8 relative overflow-hidden text-ivory">
+    <div className="min-h-screen bg-sindoor w-full flex flex-col p-4 md:p-8 relative overflow-hidden text-ivory">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] gap-8">
@@ -56,6 +56,6 @@ export default function ComparePage() {
           BATTLE KAREN?
         </button>
       </div>
-    </main>
+    </div>
   );
 }

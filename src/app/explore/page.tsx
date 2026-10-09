@@ -15,6 +15,12 @@ const Map = dynamic(() => import("../../components/map/Map"), {
   ),
 });
 
+/**
+ * ExplorePage Component
+ * 
+ * Main interactive map page for navigating Connaught Place (Pune Edition).
+ * Uses MapLibre GL for rendering and supports URL query parameters for deep linking.
+ */
 export default function ExplorePage() {
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
 
@@ -28,29 +34,29 @@ export default function ExplorePage() {
   }, []);
 
   return (
-    <main className="h-screen w-full flex flex-col md:flex-row overflow-hidden bg-ivory">
+    <main aria-label="Interactive Map Exploration" className="h-screen w-full flex flex-col md:flex-row overflow-hidden bg-ivory">
       {/* Sidebar / Bottom Sheet */}
-      <section className="w-full md:w-96 h-1/3 md:h-full bg-ivory border-t-4 md:border-t-0 md:border-r-4 border-navy z-10 flex flex-col relative shadow-[10px_0_20px_rgba(0,0,0,0.1)]">
-        <header className="p-4 bg-haldi border-b-4 border-navy flex items-center justify-between">
+      <div className="w-full md:w-96 h-1/3 md:h-full bg-ivory border-t-4 md:border-t-0 md:border-r-4 border-navy z-10 flex flex-col relative shadow-[10px_0_20px_rgba(0,0,0,0.1)]">
+        <div className="p-4 bg-haldi border-b-4 border-navy flex items-center justify-between">
           <h2 className="font-display-latin text-3xl text-navy">EXPLORE</h2>
           <Link href="/">
-            <button aria-label="Go Back" className="bg-bubblegum border-2 border-navy p-2 rounded-full sticker-border hover:scale-105 transition-transform">
+            <button className="bg-bubblegum border-2 border-navy p-2 rounded-full sticker-border hover:scale-105 transition-transform">
               <ArrowLeft size={24} className="text-navy" />
             </button>
           </Link>
-        </header>
+        </div>
         
-        <nav aria-label="Filters" className="p-4 flex gap-2 overflow-x-auto border-b-2 border-navy border-dashed">
+        <div className="p-4 flex gap-2 overflow-x-auto border-b-2 border-navy border-dashed">
           {["Veg Only", "Trendy", "Late Night", "Aesthetic"].map(filter => (
             <button key={filter} className="whitespace-nowrap px-3 py-1 bg-ivory text-navy border-2 border-navy rounded-md font-sticker text-lg hover:bg-riso-pink hover:text-ivory transition-colors">
               {filter}
             </button>
           ))}
-        </nav>
+        </div>
 
-        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4" role="list">
+        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
           {places.map((place) => (
-            <article 
+            <div 
               key={place.id} 
               onClick={() => setSelectedPlaceId(place.id)}
               className={`bg-paper p-4 border-2 border-navy rounded-lg transform hover:scale-105 transition-all cursor-pointer ${selectedPlaceId === place.id ? 'shadow-[0_0_0_4px_var(--color-navy)] scale-105' : 'shadow-[4px_4px_0_var(--color-navy)] hover:-translate-y-1'}`}
@@ -61,15 +67,15 @@ export default function ExplorePage() {
                 <span>{place.area}</span>
                 <span>{place.price}</span>
               </div>
-            </article>
+            </div>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* Map Area */}
-      <section className="flex-1 relative bg-ivory" aria-label="Map view">
+      <div className="flex-1 relative bg-ivory">
         <Map selectedPlaceId={selectedPlaceId} />
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

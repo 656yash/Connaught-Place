@@ -10,7 +10,7 @@ export default function KharidoPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-haldi w-full flex flex-col p-4 md:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-haldi w-full flex flex-col p-4 md:p-8 relative overflow-hidden">
       <div className="absolute inset-0 halftone-overlay opacity-10 pointer-events-none" />
 
       <div className="relative z-10 flex items-center gap-4 mb-12">
@@ -40,6 +40,6 @@ export default function KharidoPage() {
           </div>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

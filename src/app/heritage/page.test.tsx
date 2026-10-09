@@ -5,6 +5,13 @@ import HeritagePage from './page';
 describe('Heritage Page', () => {
   it('renders the main heading', () => {
     render(<HeritagePage />);
-    expect(screen.getByText(/GHOOMO/i)).toBeInTheDocument();
+    const heading = screen.getByText(/GHOOMO/i);
+    expect(heading).toBeInTheDocument();
+  });
+
+  it('renders heritage locations', () => {
+    render(<HeritagePage />);
+    expect(screen.getByText(/Shaniwar Wada/i)).toBeInTheDocument();
+    expect(screen.getByText(/Aga Khan Palace/i)).toBeInTheDocument();
   });
 });
