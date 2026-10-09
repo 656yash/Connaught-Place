@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function LivePage() {
   return (
-    <div className="min-h-screen bg-ink-blue w-full flex flex-col p-4 md:p-8 relative overflow-hidden">
+    <main className="min-h-screen bg-ink-blue w-full flex flex-col p-4 md:p-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
 
       <div className="relative z-10 flex items-center justify-between mb-12">
@@ -56,6 +56,6 @@ export default function LivePage() {
           </h2>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
