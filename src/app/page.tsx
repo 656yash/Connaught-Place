@@ -28,19 +28,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Decorative Background Stickers */}
-      <div className="absolute top-16 right-4 md:right-24 w-32 md:w-64 h-32 md:h-64 -rotate-12 opacity-80 pointer-events-none animate-pulse">
-        <Image src="/Landing Page/landing4.png" alt="Deco" fill className="object-contain" />
-      </div>
-      <div className="absolute bottom-24 left-4 md:left-24 w-40 md:w-80 h-40 md:h-80 rotate-6 opacity-70 pointer-events-none">
-        <Image src="/Landing Page/landingcorner.png" alt="Deco" fill className="object-contain" />
-      </div>
-      <div className="absolute top-1/3 left-10 w-24 h-24 -rotate-12 opacity-60 pointer-events-none mix-blend-multiply">
-        <Image src="/Landing Page/landing1.png" alt="Deco" fill className="object-contain" />
-      </div>
-      <div className="absolute bottom-1/3 right-10 w-48 h-48 rotate-12 opacity-60 pointer-events-none rounded-full overflow-hidden border-4 border-dashed border-navy">
-        <Image src="/Landing Page/landing2.jpg" alt="Deco" fill className="object-cover" />
-      </div>
 
       {/* Main Content & Floating Stickers */}
       <div className="relative z-20 w-full h-screen flex flex-col items-center justify-center">
