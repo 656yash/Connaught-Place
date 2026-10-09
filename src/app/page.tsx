@@ -71,51 +71,51 @@ export default function Home() {
         <div className="absolute inset-0 pointer-events-none">
           
           {/* KHAO (Food) */}
-          <Link href="/food" className="pointer-events-auto absolute top-[15%] left-[10%] md:left-[20%] hover:scale-125 hover:rotate-6 transition-transform group">
+          <Link href="/food" aria-label="Explore Food Section" className="pointer-events-auto absolute top-[15%] left-[10%] md:left-[20%] hover:scale-125 hover:rotate-6 transition-transform group">
             <div className="relative w-28 h-28 md:w-40 md:h-40 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_15px_25px_rgba(255,62,165,0.6)]">
-              <Image src="/stickers/food-sticker.png" alt="Khao" fill className="object-contain" />
+              <Image src="/stickers/food-sticker.png" alt="Khao Icon" fill className="object-contain" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
+            <div aria-hidden="true" className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
               KHAO
             </div>
           </Link>
 
           {/* GHOOMO (Heritage) */}
-          <Link href="/heritage" className="pointer-events-auto absolute top-[20%] right-[10%] md:right-[20%] hover:scale-125 hover:-rotate-12 transition-transform group">
+          <Link href="/heritage" aria-label="Explore Heritage Section" className="pointer-events-auto absolute top-[20%] right-[10%] md:right-[20%] hover:scale-125 hover:-rotate-12 transition-transform group">
             <div className="relative w-32 h-32 md:w-44 md:h-44 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_15px_25px_rgba(63,94,58,0.6)]">
-              <Image src="/stickers/heritage-sticker.png" alt="Ghoomo" fill className="object-contain" />
+              <Image src="/stickers/heritage-sticker.png" alt="Ghoomo Icon" fill className="object-contain" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
+            <div aria-hidden="true" className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
               GHOOMO
             </div>
           </Link>
 
           {/* KHARIDO (Shopping) */}
-          <Link href="/kharido" className="pointer-events-auto absolute bottom-[25%] left-[5%] md:left-[15%] hover:scale-125 hover:rotate-12 transition-transform group">
+          <Link href="/kharido" aria-label="Explore Shopping Section" className="pointer-events-auto absolute bottom-[25%] left-[5%] md:left-[15%] hover:scale-125 hover:rotate-12 transition-transform group">
             <div className="relative w-32 h-32 md:w-48 md:h-48 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_15px_25px_rgba(255,233,77,0.6)]">
-              <Image src="/stickers/mall-sticker.png" alt="Kharido" fill className="object-contain" />
+              <Image src="/stickers/mall-sticker.png" alt="Kharido Icon" fill className="object-contain" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
+            <div aria-hidden="true" className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
               KHARIDO
             </div>
           </Link>
 
           {/* COMPARE */}
-          <Link href="/compare" className="pointer-events-auto absolute bottom-[20%] right-[5%] md:right-[15%] hover:scale-125 hover:-rotate-6 transition-transform group">
+          <Link href="/compare" aria-label="Explore VS Arena Section" className="pointer-events-auto absolute bottom-[20%] right-[5%] md:right-[15%] hover:scale-125 hover:-rotate-6 transition-transform group">
             <div className="relative w-28 h-28 md:w-40 md:h-40 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_15px_25px_rgba(230,57,70,0.6)]">
-              <Image src="/stickers/battle-sticker.png" alt="Compare" fill className="object-contain" />
+              <Image src="/stickers/battle-sticker.png" alt="Compare Icon" fill className="object-contain" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
+            <div aria-hidden="true" className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
               COMPARE
             </div>
           </Link>
 
           {/* LIVE (City Pulse) */}
-          <Link href="/live" className="pointer-events-auto absolute top-[40%] right-[2%] md:right-[5%] hover:scale-125 hover:rotate-12 transition-transform group">
+          <Link href="/live" aria-label="Explore Live City Pulse Section" className="pointer-events-auto absolute top-[40%] right-[2%] md:right-[5%] hover:scale-125 hover:rotate-12 transition-transform group">
             <div className="relative w-24 h-24 md:w-36 md:h-36 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_15px_25px_rgba(47,63,214,0.6)]">
-              <Image src="/stickers/live-sticker.png" alt="Live" fill className="object-contain" />
+              <Image src="/stickers/live-sticker.png" alt="Live Icon" fill className="object-contain" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
+            <div aria-hidden="true" className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-ivory text-navy font-sticker text-xl px-3 py-1 border-2 border-navy rounded opacity-0 group-hover:opacity-100 transition-opacity">
               LIVE
             </div>
           </Link>
