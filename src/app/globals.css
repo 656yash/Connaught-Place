@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display-latin: var(--font-display-latin), ui-sans-serif, system-ui, sans-serif;
+  --font-display-devanagari: var(--font-display-devanagari), ui-sans-serif, system-ui, sans-serif;
+  --font-sticker: var(--font-sticker), ui-sans-serif, system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-navy: #1B1F36;
+  --color-moss: #3F5E3A;
+  --color-bubblegum: #FF9EDB;
+  --color-plum: #7A1F5C;
+  --color-haldi: #FFE94D;
+  --color-sindoor: #E63946;
+  --color-ink-blue: #2F3FD6;
+  --color-riso-pink: #FF3EA5;
+  --color-paper: #D8CDBB;
+  --color-mint-safe: #3DDC97;
+  --color-ivory: #F7F5EF;
+  --color-background: var(--color-navy);
+  --color-foreground: var(--color-ivory);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-marquee: marquee 15s linear infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .text-shadow-plum {
+    text-shadow: 2px 2px 0 var(--color-plum), 4px 4px 0 var(--color-plum), 6px 6px 0 var(--color-plum), 8px 8px 0 rgba(122,31,92,.6);
+  }
+  
+  .text-shadow-offset {
+    text-shadow: 2px 2px 0 var(--color-riso-pink), -2px -2px 0 var(--color-ink-blue);
+  }
+
+  .sticker-border {
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 2px white) drop-shadow(0 0 2px white) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+  }
+  
+  .sticker-border-colored {
+    filter: drop-shadow(0 0 2px var(--color-haldi)) drop-shadow(0 0 2px var(--color-haldi)) drop-shadow(0 0 2px var(--color-haldi)) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+  }
+
+  .halftone-overlay {
+    background-image: radial-gradient(var(--color-navy) 20%, transparent 20%);
+    background-size: 4px 4px;
+    mix-blend-mode: multiply;
+  }
 }
