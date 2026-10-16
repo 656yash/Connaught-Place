@@ -76,6 +76,6 @@ export default function ExplorePage() {
       <div className="flex-1 relative bg-ivory">
         <Map selectedPlaceId={selectedPlaceId} />
       </div>
-    </div>
+    </main>
   );
 }

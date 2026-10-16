@@ -5,7 +5,7 @@ import FoodPage from './page';
 describe('Food Page', () => {
   it('renders the main heading', () => {
     render(<FoodPage />);
-    const heading = screen.getByText(/KHAO PUNE/i);
+    const heading = screen.getByRole('heading', { name: /KHAO PUNE/i });
     expect(heading).toBeInTheDocument();
   });
 
